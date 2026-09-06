@@ -1,0 +1,112 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Manrope";
+}
+
+@font-face {
+    font-family: "Manrope";
+    src: url("../Fonts/Manrope-Regular.ttf");
+}
+
+:root {
+    --bg-color: #202632;
+    --card-bg: #313a49;
+    --advice-color: hsl(150, 100%, 66%);
+    --btn-color: #52ffad;
+    --shadow-btn: #52ffae77;
+    --quote-text-color: #d5e7f1;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--bg-color);
+}
+
+.app {
+    background-color: var(--card-bg);
+    border-radius: 10px;
+    padding: 30px 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.app h1 {
+    font-size: medium;
+    color: var(--advice-color);
+    font-weight: 400;
+    letter-spacing: 4px;
+}
+
+#quoteText {
+    color: var(--quote-text-color);
+    font-weight: 800;
+    font-size: 27px;
+    max-width: 400px;
+    text-align: center;
+    margin: 24px 0px;
+}
+
+fieldset {
+    width: 100%;
+    text-align: center;
+    border: none;
+    border-top: 1px solid #595f68;
+    margin: 20px 0px 50px;
+}
+
+fieldset legend {
+    display: flex;
+    padding: 0px 15px;
+    display: flex;
+    gap: 8px;
+}
+
+fieldset legend div {
+    width: 6px;
+    height: 15px;
+    background-color: var(--quote-text-color);
+    border-radius: 50px;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+}
+
+.bg-icon {
+    background-color: var(--btn-color);
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    bottom: -35px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.bg-icon:hover {
+    box-shadow: 2px 2px 30px var(--shadow-btn),
+                -2px -2px 30px var(--shadow-btn);
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 20px;
+    }
+}
